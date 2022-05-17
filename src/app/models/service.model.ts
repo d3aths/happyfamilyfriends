@@ -1,6 +1,10 @@
 export class Service {
   id?: any;
+  creator?: string;
   title?: string;
-  description?: string;
-  published?: boolean;
+  category?: string;
+  details?: string;
+  availableTokens?: number;
+  date?: string;
+  // published?: boolean;
 }

@@ -14,8 +14,11 @@ export class ServiceDetailsComponent implements OnInit {
 
   @Input() currentService: Service = {
     title: '',
-    description: '',
-    published: false
+    category: '',
+    details: '',
+    availableTokens: 0,
+    date: ''
+    // published: false
   };
   
   message = '';
@@ -43,25 +46,28 @@ export class ServiceDetailsComponent implements OnInit {
       });
   }
 
-  updatePublished(status: boolean): void {
-    const data = {
-      title: this.currentService.title,
-      description: this.currentService.description,
-      published: status
-    };
+  // updatePublished(status: boolean): void {
+  //   const data = {
+  //     title: this.currentService.title,
+  //     category: this.currentService.category,
+  //     details: this.currentService.details,
+  //     availableTokens: this.currentService.availableTokens,
+  //     date: this.currentService.date,
+  //     // published: status
+  //   };
 
-    this.message = '';
+  //   this.message = '';
 
-    this.serviceService.update(this.currentService.id, data)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.currentService.published = status;
-          this.message = res.message ? res.message : 'The status was updated successfully!';
-        },
-        error: (e) => console.error(e)
-      });
-  }
+  //   this.serviceService.update(this.currentService.id, data)
+  //     .subscribe({
+  //       next: (res) => {
+  //         console.log(res);
+  //         this.currentService.published = status;
+  //         this.message = res.message ? res.message : 'The status was updated successfully!';
+  //       },
+  //       error: (e) => console.error(e)
+  //     });
+  // }
 
   updateService(): void {
     this.message = '';

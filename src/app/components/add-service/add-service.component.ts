@@ -11,8 +11,11 @@ export class AddServiceComponent implements OnInit {
 
   service: Service = {
     title: '',
-    description: '',
-    published: false
+    category: '',
+    details: '',
+    availableTokens: 0,
+    date: ''
+    // published: false
   };
   submitted = false;
 
@@ -24,7 +27,10 @@ export class AddServiceComponent implements OnInit {
   saveService(): void {
     const data = {
       title: this.service.title,
-      description: this.service.description
+      category: this.service.category,
+      details: this.service.details,
+      availableTokens: this.service.availableTokens,
+      date: this.service.date,
     };
 
     this.serviceService.create(data)
@@ -41,8 +47,11 @@ export class AddServiceComponent implements OnInit {
     this.submitted = false;
     this.service = {
       title: '',
-      description: '',
-      published: false
+      category: '',
+      details: '',
+      availableTokens: 0,
+      date: ''
+      // published: false
     };
   }
 
