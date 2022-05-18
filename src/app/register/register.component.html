@@ -4,6 +4,8 @@
         id="profile-img"
         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
         class="profile-img-card"
+        width="180"
+        height="200"
       />
       <form
         *ngIf="!isSuccessful"
@@ -23,7 +25,6 @@
             minlength="3"
             maxlength="30"
             #name="ngModel" 
-            <!-- possible needs to be changed to #username or removed -->
           />
           <div class="alert-danger" *ngIf="name.errors && f.submitted">
             <div *ngIf="name.errors['required']">Name is required</div>

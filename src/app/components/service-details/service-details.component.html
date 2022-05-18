@@ -60,7 +60,7 @@
           class="form-control"
           id="category"
           required
-          [(ngModel)]="service.category"
+          [(ngModel)]="currentService.category"
           name="category"
           placeholder="This should be a dropdown menu"
         />
@@ -71,7 +71,7 @@
           class="form-control"
           id="details"
           required
-          [(ngModel)]="service.details"
+          [(ngModel)]="currentService.details"
           name="details"
           placeholder="Short description of what the service entails"
         />
@@ -82,7 +82,7 @@
           class="form-control"
           id="availableTokens"
           required
-          [(ngModel)]="service.availableTokens"
+          [(ngModel)]="currentService.availableTokens"
           name="availableTokens"
           placeholder="How many tokens this service has until it becomes unavailable"
         />
@@ -93,7 +93,7 @@
           class="form-control"
           id="date"
           required
-          [(ngModel)]="service.date"
+          [(ngModel)]="currentService.date"
           name="date"
           placeholder="Date service will take place"
         />
