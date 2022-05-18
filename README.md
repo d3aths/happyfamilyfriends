@@ -14,10 +14,10 @@ ng serve --port 8081
 
 ### To - do
 
-- [] change services add link to only be accessible by logged in provider roles
+- [ ] change services add link to only be accessible by logged in provider roles
 
-- [] change profile page to display information properly
+- [ ] change profile page to display information properly
 
-- [] add token system
+- [ ] add token system
 
-- [] overhaul the css to make it look like an actual website
+- [ ] overhaul the css to make it look like an actual website
