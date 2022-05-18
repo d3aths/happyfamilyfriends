@@ -21,3 +21,5 @@ ng serve --port 8081
 - [ ] add token system
 
 - [ ] overhaul the css to make it look like an actual website
+
+- [ ] add roles on register page to indictae if provider or regular user
