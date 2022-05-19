@@ -6,6 +6,7 @@ import { TokenStorageService } from '../services/token-storage.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+//creates the login form fields
 export class LoginComponent implements OnInit {
   form: any = {
     email: null,
@@ -15,6 +16,7 @@ export class LoginComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   roles: string[] = [];
+  //uses auth and tokens to manage user roles
   constructor(private authService: AuthService, private tokenStorage: TokenStorageService) { }
   ngOnInit(): void {
     if (this.tokenStorage.getToken()) {
@@ -22,6 +24,7 @@ export class LoginComponent implements OnInit {
       this.roles = this.tokenStorage.getUser().roles;
     }
   }
+  //validating the login or throwing an error if failed
   onSubmit(): void {
     const { email, password } = this.form;
     this.authService.login(email, password).subscribe({
